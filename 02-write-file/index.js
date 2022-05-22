@@ -7,7 +7,7 @@ const process = require('process');
 const rl = readline.createInterface({ input, output });
 const way = path.join('02-write-file', 'text.txt');
 
-fs.open(way, (err) => {
+fs.open(way, 'w', (err) => {
   if(err) throw err;
 });
 fs.truncate(way , err => {
